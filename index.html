@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒险王卫斯理之蓝血人-科幻小说全本阅读与故事解析</title>
+    <meta name="description" content="《冒险王卫斯理之蓝血人》在线阅读页面，提供倪匡经典科幻小说章节浏览、角色分析、故事背景及科幻世界观解析，带你领略卫斯理系列中的蓝血人文明。">
+    <meta name="keywords" content="冒险王卫斯理之蓝血人, 倪匡, 卫斯理系列, 蓝血人, 科幻小说, 在线阅读">
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #0d47a1;
+            --accent-color: #ff6f00;
+            --bg-color: #f5f7fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: var(--spacing-unit) 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #ffc107;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a:hover {
+            color: #ffc107;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 25px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #e65100;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* Chapter List */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 5px solid var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .chapter-list {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .chapter-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-title {
+            font-weight: 500;
+        }
+
+        .chapter-link {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        /* Sidebar */
+        .sidebar-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: var(--text-light);
+            display: inline-block;
+            width: 70px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: #e3f2fd;
+            color: var(--secondary-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        /* Analysis Section */
+        .analysis-section {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .analysis-content h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .analysis-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Character Cards */
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .char-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+
+        .char-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .char-avatar {
+            width: 80px;
+            height: 80px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--text-light);
+        }
+
+        .char-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .char-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: #cfd8dc;
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #cfd8dc;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>★</span> 卫斯理宇宙
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">卫斯理系列</a></li>
+                    <li><a href="#">白素</a></li>
+                    <li><a href="#">蓝血人</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>冒险王卫斯理之蓝血人</h1>
+            <p>探索倪匡笔下的外星文明，解读蓝血人独特的生命形态与地球的接触史。</p>
+            <a href="#chapters" class="btn">开始阅读</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="main-grid">
+            <!-- Left Content -->
+            <div class="content-area">
+                <div class="section-title">章节目录</div>
+                <div class="chapter-list" id="chapters">
+                    <div class="chapter-item">
+                        <span class="chapter-title">第一章：奇怪的蓝血人</span>
+                        <a href="#" class="chapter-link">阅读 &rarr;</a>
+                    </div>
+                    <div class="chapter-item">
+                        <span class="chapter-title">第二章：意外被捕</span>
+                        <a href="#" class="chapter-link">阅读 &rarr;</a>
+                    </div>
+                    <div class="chapter-item">
+                        <span class="chapter-title">第三章：外星人的特征</span>
+                        <a href="#" class="chapter-link">阅读 &rarr;</a>
+                    </div>
+                    <div class="chapter-item">
+                        <span class="chapter-title">第四章：地球上的蓝血人</span>
+                        <a href="#" class="chapter-link">阅读 &rarr;</a>
+                    </div>
+                    <div class="chapter-item">
+                        <span class="chapter-title">第五章：白素的介入</span>
+                        <a href="#" class="chapter-link">阅读 &rarr;</a>
+                    </div>
+                    <div class="chapter-item">
+                        <span class="chapter-title">第六章：生命层次的差异</span>
+                        <a href="#" class="chapter-link">阅读 &rarr;</a>
+                    </div>
+                    <div class="chapter-item">
+                        <span class="chapter-title">第七章：蓝血人的离去</span>
+                        <a href="#" class="chapter-link">阅读 &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="analysis-section" id="background">
+                    <div class="section-title">故事背景与科幻解析</div>
+                    <div class="analysis-content">
+                        <h3>关于蓝血人</h3>
+                        <p>《冒险王卫斯理之蓝血人》是倪匡“卫斯理系列”中的经典作品之一。故事围绕着卫斯理在旅途中偶遇一名自称来自外星的“蓝血人”展开。这名外星人的血液呈现蓝色，且拥有超乎常人的生理机能。</p>
+                        
+                        <h3>核心冲突：生命层次的差异</h3>
+                        <p>小说最引人入胜之处在于探讨了不同文明之间巨大的“生命层次”差异。蓝血人的寿命极长，对地球的科技和战争行为感到困惑甚至无法理解。他们不仅拥有超强的适应力，而且拥有极高的精神境界，能够轻易看穿人类的心理活动。这种“高维生命”与地球人的互动，构建了一种既神秘又充满哲学意味的科幻叙事。</p>
+
+                        <h3>科幻主题</h3>
+                        <p>作品并非单纯的探险，而是借由外星接触的设定，折射出人类自身的渺小与不足。蓝血人的存在挑战了人类对“生命”定义的极限，同时也暗示了人类文明在浩瀚宇宙中可能面临的孤独与未知的挑战。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h3 class="section-title" style="font-size: 1.2rem; border: none; padding: 0; margin-bottom: 15px;">作品信息</h3>
+                    <ul class="info-list">
+                        <li><span class="info-label">作者：</span>倪匡</li>
+                        <li><span class="info-label">分类：</span>科幻小说 / 冒险 / 外星文明</li>
+                        <li><span class="info-label">主角：</span>卫斯理、白素、蓝血人</li>
+                        <li><span class="info-label">状态：</span>完结</li>
+                        <li><span class="info-label">字数：</span>约 4万字</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3 class="section-title" style="font-size: 1.2rem; border: none; padding: 0; margin-bottom: 15px;">相关标签</h3>
+                    <div class="tags">
+                        <span class="tag">外星人</span>
+                        <span class="tag">超能力</span>
+                        <span class="tag">长寿</span>
+                        <span class="tag">生命层次</span>
+                        <span class="tag">宇宙探索</span>
+                        <span class="tag">卫斯理</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3 class="section-title" style="font-size: 1.2rem; border: none; padding: 0; margin-bottom: 15px;">主要角色</h3>
+                    <div class="char-grid">
+                        <div class="char-card">
+                            <div class="char-avatar">🧑‍🚀</div>
+                            <div class="char-name">卫斯理</div>
+                            <div class="char-desc">好奇心旺盛的冒险家，故事的叙述者。</div>
+                        </div>
+                        <div class="char-card">
+                            <div class="char-avatar">🧑‍🚀</div>
+                            <div class="char-name">蓝血人</div>
+                            <div class="char-desc">外星访客，拥有蓝色血液和超凡智慧。</div>
+                        </div>
+                        <div class="char-card">
+                            <div class="char-avatar">👩</div>
+                            <div class="char-name">白素</div>
+                            <div class="char-desc">卫斯理的妻子，智慧冷静，多次协助解决危机。</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于卫斯理</a>
+                <a href="#">版权声明</a>
+                <a href="#">免责声明</a>
+                <a href="#">联系我们</a>
+            </div>
+            <p>&copy; 2023 卫斯理宇宙阅读站. 保留所有权利.</p>
+            <p style="font-size: 0.8rem; color: #78909c;">本站仅用于作品介绍与阅读指引，非官方网站。</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+                                                        </html>
