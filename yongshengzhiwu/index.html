@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>永生之物 - 探索不朽生命的奥秘与文明</title>
+    <meta name="description" content="探索关于永生之物的百科全书。涵盖生物永生、神话传说、科幻设定及哲学思考，深入解析人类对不朽生命的无尽追求与科学边界。">
+    <meta name="keywords" content="永生之物, 生物永生, 不朽生命, 神话传说, 科幻设定">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-body: #0a0b10;
+            --bg-card: #14161f;
+            --bg-nav: rgba(10, 11, 16, 0.95);
+            --text-main: #e0e6ed;
+            --text-muted: #94a3b8;
+            --accent-primary: #8b5cf6; /* Violet */
+            --accent-secondary: #06b6d4; /* Cyan */
+            --border-color: #2d3748;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1rem;
+            font-weight: 700;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
+            border-radius: 2px;
+        }
+
+        /* Header & Nav */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: var(--bg-nav);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15), transparent 60%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            padding: 0.4rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Main Content Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 3rem;
+            padding: 3rem 0;
+        }
+
+        /* Article Cards */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            border-color: var(--accent-primary);
+        }
+
+        .card-img-placeholder {
+            height: 180px;
+            background-color: #1f2937;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-img-placeholder::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--accent-secondary);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Sidebar */
+        aside {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .sidebar-widget {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            border-bottom: 2px solid var(--accent-primary);
+            display: inline-block;
+            padding-bottom: 0.25rem;
+        }
+
+        .category-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .category-list a:hover {
+            color: var(--text-main);
+            padding-left: 5px;
+        }
+
+        .category-count {
+            background: rgba(255,255,255,0.1);
+            padding: 0.1rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+
+        /* Feature Section */
+        .feature-section {
+            background: linear-gradient(135deg, #1e1b4b, #0f172a);
+            padding: 4rem 0;
+            margin-top: 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-secondary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: #4b5563;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .main-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; } /* Simplified for single file demo */
+            .feature-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .sidebar { display: none; } /* Hide sidebar on mobile for cleaner view */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">ETERNAL<span style="color:var(--text-main)">.LAB</span></a>
+                <div class="nav-links">
+                    <a href="#" class="active">首页</a>
+                    <a href="#biology">生物科学</a>
+                    <a href="#mythology">神话传说</a>
+                    <a href="#fiction">科幻设定</a>
+                    <a href="#philosophy">哲学思考</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>探索<span style="color:var(--accent-primary)">永生之物</span><br>超越时间的生命形态</h1>
+                <p>从生物学上的细胞修复到神话中的不朽灵魂，深入解析人类对“永生”这一终极命题的追寻、恐惧与想象。</p>
+                <div class="hero-tags">
+                    <span class="tag">生物科技</span>
+                    <span class="tag">神话学</span>
+                    <span class="tag">科幻文学</span>
+                    <span class="tag">量子力学</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container main-grid">
+            <!-- Main Content Area -->
+            <section id="content-area">
+                <h2 class="section-title">探索永生之物</h2>
+                
+                <div class="article-grid">
+                    <!-- Article 1 -->
+                    <article class="card">
+                        <div class="card-img-placeholder">🧬</div>
+                        <div class="card-content">
+                            <span class="card-meta">生物科学</span>
+                            <h3 class="card-title">端粒与端粒酶：细胞寿命的分子开关</h3>
+                            <p class="card-excerpt">探讨端粒缩短如何限制细胞分裂次数，以及端粒酶如何成为“永生”研究的关键靶点。</p>
+                            <div class="card-footer">
+                                <span>2023-10-24</span>
+                                <span>阅读 12k</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="card">
+                        <div class="card-img-placeholder">🦠</div>
+                        <div class="card-content">
+                            <span class="card-meta">微生物学</span>
+                            <h3 class="card-title">灯塔水母：唯一能“返老还童”的动物</h3>
+                            <p class="card-excerpt">解析灯塔水母的逆转发育过程，它如何在成年阶段变回水螅体，从而在理论上实现无限循环。</p>
+                            <div class="card-footer">
+                                <span>2023-10-20</span>
+                                <span>阅读 8.5k</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="card">
+                        <div class="card-img-placeholder">⚛️</div>
+                        <div class="card-content">
+                            <span class="card-meta">科幻设定</span>
+                            <h3 class="card-title">意识上传：数字永生的伦理边界</h3>
+                            <p class="card-excerpt">当肉体消亡，意识是否永存？探讨《黑客帝国》与《西部世界》中关于数字永生的哲学困境。</p>
+                            <div class="card-footer">
+                                <span>2023-10-15</span>
+                                <span>阅读 15k</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="card">
+                        <div class="card-img-placeholder">🧝</div>
+                        <div class="card-content">
+                            <span class="card-meta">神话传说</span>
+                            <h3 class="card-title">神话中的永生者：西西弗斯与彭透斯</h3>
+                            <p class="card-excerpt">分析希腊神话中那些试图挑战神权、追求永生却招致毁灭的悲剧人物。</p>
+                            <div class="card-footer">
+                                <span>2023-10-10</span>
+                                <span>阅读 6.2k</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 5 -->
+                    <article class="card">
+                        <div class="card-img-placeholder">🔮</div>
+                        <div class="card-content">
+                            <span class="card-meta">量子物理</span>
+                            <h3 class="card-title">量子永生：多重宇宙中的幽灵</h3>
+                            <p class="card-excerpt">基于薛定谔的猫思想实验，探讨量子力学是否为意识提供了超越时间的存在可能。</p>
+                            <div class="card-footer">
+                                <span>2023-10-05</span>
+                                <span>阅读 22k</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 6 -->
+                    <article class="card">
+                        <div class="card-img-placeholder">🤖</div>
+                        <div class="card-content">
+                            <span class="card-meta">人工智能</span>
+                            <h3 class="card-title">AI 中的不朽：算法的无限迭代</h3>
+                            <p class="card-excerpt">在计算机代码的世界里，只要电力不断，数据就能永恒保存。这是否是永生之物最简单的形态？</p>
+                            <div class="card-footer">
+                                <span>2023-09-28</span>
+                                <span>阅读 9.1k</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sidebar -->
+            <aside>
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门分类</h3>
+                    <ul class="category-list">
+                        <li><a href="#"><span>生物科技</span> <span class="category-count">24</span></a></li>
+                        <li><a href="#"><span>神话传说</span> <span class="category-count">18</span></a></li>
+                        <li><a href="#"><span>科幻小说</span> <span class="category-count">35</span></a></li>
+                        <li><a href="#"><span>量子力学</span> <span class="category-count">12</span></a></li>
+                        <li><a href="#"><span>宗教哲学</span> <span class="category-count">9</span></a></li>
+                        <li><a href="#"><span>虚拟现实</span> <span class="category-count">21</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">阅读指南</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+                        本文档汇集了关于“永生之物”的多维度资料。我们致力于提供科学严谨的解释与开放性的思想探讨，而非伪科学宣传。
+                    </p>
+                    <a href="#" style="color: var(--accent-secondary); font-size: 0.9rem; font-weight: 600;">查看更多指南 &rarr;</a>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门标签</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span class="tag">长生不老</span>
+                        <span class="tag">克隆</span>
+                        <span class="tag">转世</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">意识上传</span>
+                        <span class="tag">神学</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Feature Section -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🔬</div>
+                        <h4 class="feature-title">科学探索</h4>
+                        <p class="feature-desc">端粒延长、干细胞疗法与基因编辑技术。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📖</div>
+                        <h4 class="feature-title">文学想象</h4>
+                        <p class="feature-desc">从《永生》到《流浪地球》，科幻如何定义永生。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚖️</div>
+                        <h4 class="feature-title">伦理挑战</h4>
+                        <p class="feature-desc">资源分配、社会结构变化与身份认同危机。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">ETERNAL<span style="color:var(--text-main)">.LAB</span></a>
+                    <p>专注于探索生命极限与时间本质的知识平台。在这里，我们寻找关于“永生之物”的答案，无论它存在于生物体、数字世界还是神话传说中。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>栏目导航</h4>
+                    <ul>
+                        <li><a href="#">生物科学</a></li>
+                        <li><a href="#">神话传说</a></li>
+                        <li><a href="#">科幻设定</a></li>
+                        <li><a href="#">哲学思考</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">参考文献</a></li>
+                        <li><a href="#">学术期刊</a></li>
+                        <li><a href="#">推荐书籍</a></li>
+                        <li><a href="#">社区讨论</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">联系作者</a></li>
+                        <li><a href="#">免责声明</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">加入团队</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Eternal Lab. All Rights Reserved. 仅供学习与展示使用。
+            </div>
+        </div>
+    </footer>
+
+</body>
+                  </html>
